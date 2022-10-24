@@ -3,7 +3,7 @@ export const CustomInput = (props) => {
     <>
       <input
         className="input"
-        type={props.inputType[1]}
+        type={props.inputType[0]}
         placeholder={props.placeholder}
         name={props.reference}
         value={props.dataForm || ""}

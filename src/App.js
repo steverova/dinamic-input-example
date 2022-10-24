@@ -29,11 +29,12 @@ function App() {
   }, []);
 
   const onChangeEvent = (event, index) => {
-    let data = [...formFields];
+    // let data = [...formFields];
     const name = event.target.name;
     const value = event.target.value;
-    data[index][name] = value;
-    setFormFields(data);
+    console.log([...formFields][index][name]);
+    [...formFields][index][name] = value;
+    setFormFields([...formFields]);
   }
 
   const submit = (event) => {
