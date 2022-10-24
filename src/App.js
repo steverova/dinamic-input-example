@@ -3,6 +3,8 @@ import './App.css';
 import 'bulma/css/bulma.min.css';
 import React, { useEffect, useState } from "react";
 import { EmailPerson } from './EmailPerson.model';
+import { CustomInput } from './CustomInput.component';
+import { CustomForm } from './CustomForm.component';
 
 function App() {
 
@@ -49,28 +51,11 @@ function App() {
       <div className="column">
         <div className="column is-half">
           <button onClick={addFields} className="button is-link mt-5">Agregar</button>
-          <form onSubmit={submit} >
-            {formFields.map((form, index) => {
-              return (
-                <div key={index} className="field mt-3">
-                  <div className="control">
-                    <input
-                      className="input"
-                      type="text"
-                      placeholder="Text input"
-                      name="emailAddress"
-                      value={form.emailAddress || ""}
-                      onChange={ (event) => onChangeEvent(event, index)}
-                    >
-                    </input>
-                  </div>
-                </div>
-              );
-            })}
-            <button className="button is-link" type='submit'>
-              Submit
-            </button>
-          </form>
+          <CustomForm
+            submit={submit}
+            formFields={formFields}
+            onChangeEvent={onChangeEvent}
+          ></CustomForm>
           <div className='columns m-4'>
             <p>
               {data}
