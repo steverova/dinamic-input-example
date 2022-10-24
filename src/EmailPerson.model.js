@@ -1,7 +1,7 @@
 export function EmailPerson() {
-    const Email = {
-        emailAddress: "",
-        emailAddressID: ""
-    }
-    return Email;
+  const Email = {
+    emailAddress: "",
+    emailAddressID: "",
+  };
+  return Email;
 }

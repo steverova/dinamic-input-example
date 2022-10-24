@@ -3,7 +3,6 @@ import './App.css';
 import 'bulma/css/bulma.min.css';
 import React, { useEffect, useState } from "react";
 import { EmailPerson } from './EmailPerson.model';
-import { CustomInput } from './CustomInput.component';
 import { CustomForm } from './CustomForm.component';
 
 function App() {
@@ -21,6 +20,8 @@ function App() {
       emailAddressID: 10
     }
   ]
+
+  const inputTypes = ["text", "email", "textarea", "password", "date", "number"];
 
   useEffect(() => {
 
@@ -40,7 +41,6 @@ function App() {
     setData(JSON.stringify(formFields));
   }
 
-
   const addFields = (event) => {
     event.preventDefault();
     setFormFields([...formFields, EmailPerson()]);
@@ -55,6 +55,7 @@ function App() {
             submit={submit}
             formFields={formFields}
             onChangeEvent={onChangeEvent}
+            InputType={inputTypes}
           ></CustomForm>
           <div className='columns m-4'>
             <p>
