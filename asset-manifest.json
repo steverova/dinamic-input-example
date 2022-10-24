@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dinamic-input-example/static/css/main.76991899.css",
+    "main.js": "/dinamic-input-example/static/js/main.9901f537.js",
+    "index.html": "/dinamic-input-example/index.html",
+    "main.76991899.css.map": "/dinamic-input-example/static/css/main.76991899.css.map",
+    "main.9901f537.js.map": "/dinamic-input-example/static/js/main.9901f537.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76991899.css",
+    "static/js/main.9901f537.js"
+  ]
+}
